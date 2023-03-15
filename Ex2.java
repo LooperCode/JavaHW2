@@ -24,7 +24,7 @@ public class Ex2 {
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             while ((inputStr = reader.readLine()) != null) {
                 sb2.append(inputStr);
-                System.out.println(inputStr);
+                
             }
         }
 
@@ -38,9 +38,9 @@ public class Ex2 {
     public static String[] RepalceToArr(String lines) {
 
         lines = lines.replace(":", ",")
-                .replace(";", ",")
-                .replace('"', ' ')
-                .replace(" ", "");
+                     .replace(";", ",")
+                     .replace('"', ' ')
+                     .replace(" ", "");
         String[] resArr = new String[lines.length()];
         resArr = lines.split(",");
 
@@ -50,7 +50,7 @@ public class Ex2 {
     public static String ResultOut(String[] resArr) {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < resArr.length; i++) {
+        for (int i = 0; i < resArr.length; i+=2) {
             if (resArr[i].contains("фамилия")) {
                 sb.append("Студент(-ка) ");
                 sb.append(resArr[i + 1]);
