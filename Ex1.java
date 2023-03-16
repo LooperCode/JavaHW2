@@ -14,7 +14,7 @@ public class Ex1 {
     public static void logInfo() throws IOException {
         InputStream configFile = Ex1.class.getResourceAsStream("logging.properties");
         LogManager.getLogManager().readConfiguration(configFile);
-        FileHandler fh = new FileHandler("log.xml", true);
+        FileHandler fh = new FileHandler("JavaHW2/log.xml", true);
 
         log.addHandler(fh);
         XMLFormatter xml = new XMLFormatter();
